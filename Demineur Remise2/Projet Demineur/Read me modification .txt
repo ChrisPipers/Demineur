@@ -1,0 +1,112 @@
+﻿changement effecter
+
+Board
+	pourcentBombs et nbBombs n'ont plus de param, ont utilisera 
+	la valeur des deux attributs correspondant et modifier
+	par la classe game en ajoutant deux setter
+
+Board	
+	utilisation de set pour posBombs et posFlags car cela 
+	empeche d avoir deux meme position donc pas de doublon
+
+Position
+	avec l utilisation de set les données doivent etre ordonner 
+	donc il as fallut ajouter cette methode :
+		bool operator<( const Position& pos1) const ;
+
+	// !! a documenter aussi : bool operator<( const Position& pos1) const ;
+	
+Board
+	add la methode void initPosBombs(int nbBombs, Position position);
+	a board car sinon on doit repeter 3 fois les meme lignes 
+	si on est par defaut, en % ou un nb de bombes a placer 
+	
+Board 
+	Le nom de la methode revelantPositionRecursif faut pas 
+	changer car on revelent de maniere recursif
+
+Board 
+	la classe board n'hérite plus de observer mais de observable c est elle qui sera observer 
+	
+Board 
+	ajout de la methodes     int getNbBombs(); qui permet de sacvoir si il y a autant de dark 
+	que de bombes ce qui veux dire que le jeu est fini 
+
+Board 
+	ajout a la methode void initBoard () pour initialiser le board de base 
+
+Board 
+	posBombs_ et posFlags_ etaient des set<Position> mais durant les testes il y a un doublon 
+	car vissiblement verifier que deux position soit pas les meme ne fonctionne pas 
+	en prenant un iterateur via find(elem) le comparer a un autre elem echoue
+	dans le test tab 20 * 20 et mettre donc les bombes par defaut, des fois on trouve 
+	69 bombes car la liste des bombes a deux fois la meme position meme en verifiant via 
+	
+	alors avec un set de pair et la clee valant un string de x et y ont as jamais de doublon 
+	exemple : position (2,20) -> string : "2,20"
+	
+Board 
+	ajout de setter pour connaitre le pourcentage ou le nombre de bombe attendue 
+	dans le board
+		void setPourcentMines(double);
+		void setNbMines(int );
+	
+Board 
+	ajout de l exception si hors du tab 
+
+Board 
+	ajout methode upAndDown() et leftAndRight() pour verifier si la valeur est entre deux bombes 
+	et pas avoir des indices et des clear la ou il devrais pas en avoir 
+	
+RulesEndGame 
+	suppression de la methode     bool allFlagOnBombs(); qui est plus necessaire d apres ce qu 
+	a dis le prof
+	
+RulesEndGame
+	modif isEnd en void 
+	
+RulesEndGame
+	delete la methode isend 
+	et le guetter appel allclear et allclear fait ce qu il faut et modifie isEnd_ si necessaire
+	
+Time 
+	add attribut double time_ car faut avoir un moment T d ou calculer le temps passer 
+	et ajout de l include <time.h>
+	
+Time 
+	la methode     void setTimePassed(double timePassed); le param double est pas necessaire
+	car sera calculer avec le moment T et le temps passer 
+	
+Time 
+	ajout un guetter pour time_ different de timePassed_
+	
+Time 
+	impossible a tester avec des methodes sleep cela ne fonctionne pas 
+	
+Board
+	les tests de revelantPositionRecursif faut tester que la premiere position 
+	soit un clear ou un int car il se peut que la premiere position 
+	soit d abord un c puis devient un int car il y a une bombe autour. 
+	
+	verifier la totaliter de cette methode parait fastidieuce 
+	
+	
+Board 
+	ajout et suppression de plusieur methode
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

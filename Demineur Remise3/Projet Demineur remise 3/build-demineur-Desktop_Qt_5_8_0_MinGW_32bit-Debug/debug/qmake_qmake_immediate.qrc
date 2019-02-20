@@ -1,0 +1,6 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/">
+<file alias="images/bomb.png">C:/Users/Mitch/Desktop/Démineur Projet/Démineur Remise3/Projet Demineur remise 3/demineur/images/bomb.png</file>
+<file alias="images/flag.png">C:/Users/Mitch/Desktop/Démineur Projet/Démineur Remise3/Projet Demineur remise 3/demineur/images/flag.png</file>
+</qresource>
+</RCC>
